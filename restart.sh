@@ -1,19 +1,13 @@
 #! /bin/sh
 
-# deploy Easytrade
-echo "Deploying Easytrade....."
-kubectl create namespace easytrade
-
-kubectl apply -f ./easytrade/manifests
+# Restarting Easytrade
+echo "Restarting Easytrade....."
+kubectl delete pod --all -n easytrade
 
 # deploy Easytravel
-echo "Deploying Easytravel...."
-kubectl create namespace easytravel
-
-kubectl apply -f ./easytravel/manifests
+echo "Restarting Easytravel...."
+kubectl delete pod --all -n easytravel
 
 # deploy Hipstershop
-echo "Deploying Hipstershop...."
-kubectl create namespace hipstershop
-
-kubectl apply -f ./hipstershop/manifests
+echo "Restarting Hipstershop...."
+kubectl delete pod --all -n hipstershop
