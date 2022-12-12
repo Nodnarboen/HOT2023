@@ -4,10 +4,14 @@
 echo "Restarting Easytrade....."
 kubectl delete pod --all -n easytrade
 
-# deploy Easytravel
+# Restarting Easytravel
 echo "Restarting Easytravel...."
 kubectl delete pod --all -n easytravel
 
-# deploy Hipstershop
+# Restarting Hipstershop
 echo "Restarting Hipstershop...."
 kubectl delete pod --all -n hipstershop
+
+# Restarting Sockshop
+echo "Restarting Sockshop...."
+kubectl delete pod --all -n sockshop
